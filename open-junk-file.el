@@ -1,6 +1,6 @@
 ;;; open-junk-file.el --- Open a junk (memo) file to try-and-error
 
-;; $Time-stamp: <2016-05-04 15:45:35 rubikitch>$
+;; $Time-stamp: <2016-05-04 15:46:11 rubikitch>$
 
 ;; Copyright (C) 2010  rubikitch
 
@@ -95,20 +95,6 @@
 ;;  7) Describe the bug using a precise recipe.
 ;;  8) Type C-c C-c to send.
 ;;  # If you are a Japanese, please write in Japanese:-)
-
-;;; History:
-
-;; $Log: open-junk-file.el,v $
-;; Revision 1.3  2010/06/18 20:07:49  rubikitch
-;; Rename variable: `open-junk-file-directory' -> `open-junk-file-format'
-;; `open-junk-file-directory' is an alias now, so you do not have to modify your .emacs.
-;;
-;; Revision 1.2  2010/05/04 09:08:48  rubikitch
-;; Added bug report command
-;;
-;; Revision 1.1  2010/03/05 22:17:32  rubikitch
-;; Initial revision
-;;
 
 ;;; Code:
 
