@@ -1,6 +1,6 @@
 ;;; open-junk-file.el --- Open a junk (memo) file to try-and-error
 
-;; $Time-stamp: <2016-05-04 15:46:11 rubikitch>$
+;; $Time-stamp: <2016-05-04 15:51:13 rubikitch>$
 
 ;; Copyright (C) 2010  rubikitch
 
@@ -113,17 +113,22 @@ It can include `format-time-string' format specifications."
   :type 'function
   :group 'open-junk-file)
 
-(defun open-junk-file ()
+(defun open-junk-file (&optional format find-file-fn)
   "Open a new file whose filename is derived from current time.
  You can write short program in it. It helps to try-and-error programs.
 
 For example, in Emacs Lisp programming, use M-x `open-junk-file'
-instead of *scratch* buffer. The junk code is SEARCHABLE."
+instead of *scratch* buffer. The junk code is SEARCHABLE.
+
+FORMAT and FIND-FILE-FN are optional.
+Default value of them are `open-junk-file-format' and
+`open-junk-file-find-file-function'."
   (interactive)
-  (let* ((file (format-time-string open-junk-file-format (current-time)))
+  (let* ((file (format-time-string (or format open-junk-file-format) (current-time)))
          (dir (file-name-directory file)))
     (make-directory dir t)
-    (funcall open-junk-file-find-file-function (read-string "Junk Code (Enter extension): " file))))
+    (funcall (or find-file-fn open-junk-file-find-file-function)
+             (read-string "Junk Code (Enter extension): " file))))
 
 ;;;; Bug report
 (defvar open-junk-file-maintainer-mail-address
