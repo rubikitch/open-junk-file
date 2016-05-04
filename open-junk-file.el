@@ -1,6 +1,6 @@
 ;;; open-junk-file.el --- Open a junk (memo) file to try-and-error
 
-;; $Id: open-junk-file.el,v 1.3 2010/06/18 20:07:49 rubikitch Exp rubikitch $
+;; $Time-stamp: <2016-05-04 15:45:35 rubikitch>$
 
 ;; Copyright (C) 2010  rubikitch
 
@@ -112,7 +112,6 @@
 
 ;;; Code:
 
-(defvar open-junk-file-version "$Id: open-junk-file.el,v 1.3 2010/06/18 20:07:49 rubikitch Exp rubikitch $")
 (eval-when-compile (require 'cl))
 (defgroup open-junk-file nil
   "open-junk-file"
