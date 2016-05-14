@@ -1,6 +1,6 @@
 ;;; open-junk-file.el --- Open a junk (memo) file to try-and-error
 
-;; $Time-stamp: <2016-05-15 07:25:14 rubikitch>$
+;; $Time-stamp: <2016-05-15 07:25:46 rubikitch>$
 
 ;; Copyright (C) 2010  rubikitch
 
@@ -103,13 +103,13 @@
   "open-junk-file"
   :group 'emacs)
 (defcustom open-junk-file-format "~/junk/%Y/%m/%d-%H%M%S."
-  "*File format to put junk files with directory.
+  "File format to put junk files with directory.
 It can include `format-time-string' format specifications."
   :type 'string
   :group 'open-junk-file)
 (defvaralias 'open-junk-file-format 'open-junk-file-directory)
 (defcustom open-junk-file-find-file-function 'find-file-other-window
-  "*Function to open junk files."
+  "Function to open junk files."
   :type 'function
   :group 'open-junk-file)
 (defcustom open-junk-file-hook nil
