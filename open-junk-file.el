@@ -101,7 +101,7 @@
 (eval-when-compile (require 'cl))
 (defgroup open-junk-file nil
   "open-junk-file"
-  :group 'emacs)
+  :group 'files)
 (defcustom open-junk-file-format "~/junk/%Y/%m/%d-%H%M%S."
   "File format to put junk files with directory.
 It can include `format-time-string' format specifications."
