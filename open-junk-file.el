@@ -119,9 +119,10 @@ Whether the file is a JUNK or not is infered by `open-junk-file-format'.")
 ;;;###autoload
 (defun find-file-hook--open-junk-file ()
   "Run `open-junk-file-hook' when the file is a JUNK file."
-  (when (string-prefix-p
-         (file-truename (replace-regexp-in-string "%.+$" "" open-junk-file-format))
-         (file-truename buffer-file-name))
+  (when (ignore-errors
+          (string-prefix-p
+           (file-truename (replace-regexp-in-string "%.+$" "" open-junk-file-format))
+           (file-truename buffer-file-name)))
     (run-hooks 'open-junk-file-hook)))
 
 ;;;###autoload
